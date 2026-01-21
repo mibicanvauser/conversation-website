@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang= "en">
+<head>
+<meta charset= "UTF-8">
+<meta name="viewport" content= "width=device-width, initial-scale=1.0">
+<title>Post-Rant (and sometimes just for fun :)</title>
+<style>
+	body {
+	  font-family: sans-serif;
+          background-color: #f4f7f6;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          margin: 0;
+      }
+     
+      .container {
+              background: pink;
+              padding: 30px;
+              border-radius: 12px;
+              box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+              text-align : center;
+              max-width: 400px;
+              width: 100%;
+      }
+      #displayBox {
+            font-size: 1.2rem;
+            color: #333;
+            margin: 20px 0;
+            padding: 20px;
+            border: 2px dashed #6200ee;
+            border-radius: 8px;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+       }
+      
+       button {
+           background-color: #6200ee;
+           color: white;
+           border: none;
+           padding: 12px 24px;
+           border-radius: 6px;
+           cursor: pointer;
+           font-size: 1rem;
+         }
+     </style>
+     </head>
+     <body>
+     <div class= "container">
+         <h1>Conversation Starters!</h1>
+         <div id= "displayBox">Press the button to get a question!</div>
+         <button onclick= "pickNewQuestion()">New Question</button>
+     </div>
+
+     <script>
+          let bank = [];
+
+     fetch('questions.json')
+          .then(response => response.json())
+          .then(data => {
+             bank = data;
+          })
+          .catch(err => {
+             document.getElementById('displayBox').innerText = "Error: Check your JSON file!";
+          console.error(err);
+         });
+    
+    function pickNewQuestion() {
+        if (bank.length === 0) return;
+
+       const randomIndex = Math.floor(Math.random() * bank.length);
+       const randomQuestion = bank[randomIndex];
+
+       document.getElementById('displayBox').innerText = randomQuestion;
+      
+     }
+  </script>
+</body>
+</html>
+
+
+           
+
