@@ -6,7 +6,7 @@
 "If you could only communicate in animal sounds for one week, what animal would you choose?",
 "If you had to eat one condiment with one meal for the rest of your life, what would it be? (don't say nothing :)",
 "If you could be a household appliance, which one would you be and why?",
-"If our relationship was a pizza topping, what would it be? (this is different from the language question",
+"If our relationship was a pizza topping, what would it be?",
 "What fictional character do you absolutely think you could take in a fight?",
 "Would you rather have fingers as long as legs or legs as short as fingers?",
 "What's the most random object in your room right now, and what's its backstory?",
@@ -16,7 +16,7 @@
 "If we adopted a pet dinosaur, what would we name it?",
 "Would you rather be able to achieve all of your fitness goals with one workout per week, or be able to read absurdly fast?",
 "Would you rather sing every word or dance every step for a day?",
-"If you could instantly master one skill, what would it be?",
+"If you could instantly master one skill, what would it be? (this is different than the language question.",
 "Would you rather experience the beginning of the world or the end?",
 "Would you rather have everything you draw become real (but be terrible at drawing) or be able to fly, but only as fast as you can walk?",
 "If you could make one thing illegal, what would it be?",
@@ -102,3 +102,4 @@
 
 
 ]
+
